@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\EightPuzzle\\EightPuzzle.csproj": {}
+    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\NQueens\\NQueens.csproj": {}
   },
   "projects": {
-    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\EightPuzzle\\EightPuzzle.csproj": {
+    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\NQueens\\NQueens.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\EightPuzzle\\EightPuzzle.csproj",
-        "projectName": "EightPuzzle",
-        "projectPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\EightPuzzle\\EightPuzzle.csproj",
+        "projectUniqueName": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\NQueens\\NQueens.csproj",
+        "projectName": "NQueens",
+        "projectPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\NQueens\\NQueens.csproj",
         "packagesPath": "C:\\Users\\Daniel D\\.nuget\\packages\\",
-        "outputPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\EightPuzzle\\obj\\",
+        "outputPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\NQueens\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel D\\AppData\\Roaming\\NuGet\\NuGet.Config",
