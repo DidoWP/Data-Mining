@@ -1,5 +1,5 @@
 ﻿using System;
-using NQueens; 
+using NQueens;
 
 class Program
 {
@@ -38,20 +38,9 @@ class Program
         
         for(int i=0; i<n; i++)
         {
-            conflicts[i] = queensPerRow[i]-1 + queensPerDOne[i - board[i] + n - 1]-1 + queensPerDTwo[i + board[i]]-1;
+            conflicts[i] = queensPerRow[board[i]]-1 + queensPerDOne[i - board[i] + n - 1]-1 + queensPerDTwo[i + board[i]]-1;
         }
         return board;
     }
-    
-    // private void CalculateConflicts()
-    // {
-    //     for(int i=0; i<this.Size; i++)
-    //     {
-    //         QueensPerRow[this.Board[i]] ++;
-    //         QueensPerDOne[i - this.Board[i] + this.Size - 1] ++;
-    //         QueensPerDTwo[i + this.Board[i]] ++; 
-    //     }
-    // }
-       
 }
 
