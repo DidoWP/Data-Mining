@@ -1,0 +1,15 @@
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\bin\Debug\net6.0\FrogLeapPuzzle.exe
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\bin\Debug\net6.0\FrogLeapPuzzle.deps.json
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\bin\Debug\net6.0\FrogLeapPuzzle.runtimeconfig.json
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\bin\Debug\net6.0\FrogLeapPuzzle.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\bin\Debug\net6.0\FrogLeapPuzzle.pdb
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\FrogLeapPuzzle.csproj.AssemblyReference.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\FrogLeapPuzzle.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\FrogLeapPuzzle.AssemblyInfoInputs.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\FrogLeapPuzzle.AssemblyInfo.cs
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\FrogLeapPuzzle.csproj.CoreCompileInputs.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\FrogLeapPuzzle.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\refint\FrogLeapPuzzle.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\FrogLeapPuzzle.pdb
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\FrogLeapPuzzle.genruntimeconfig.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Problems\FrogLeapPuzzle\obj\Debug\net6.0\ref\FrogLeapPuzzle.dll

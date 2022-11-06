@@ -1,0 +1,30 @@
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/EightPuzzle.csproj.AssemblyReference.cache
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/EightPuzzle.GeneratedMSBuildEditorConfig.editorconfig
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/EightPuzzle.AssemblyInfoInputs.cache
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/EightPuzzle.AssemblyInfo.cs
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/EightPuzzle.csproj.CoreCompileInputs.cache
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/bin/Debug/net6.0/EightPuzzle.exe
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/bin/Debug/net6.0/EightPuzzle.deps.json
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/bin/Debug/net6.0/EightPuzzle.runtimeconfig.json
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/bin/Debug/net6.0/EightPuzzle.dll
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/bin/Debug/net6.0/EightPuzzle.pdb
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/EightPuzzle.dll
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/refint/EightPuzzle.dll
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/EightPuzzle.pdb
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/EightPuzzle.genruntimeconfig.cache
+G:/My Drive/Dido/UNI/Семестър_7/Интелигентни Системи/Problems/EightPuzzle/obj/Debug/net6.0/ref/EightPuzzle.dll
+/home/didowp00/projects/EightPuzzle/bin/Debug/net6.0/EightPuzzle
+/home/didowp00/projects/EightPuzzle/bin/Debug/net6.0/EightPuzzle.deps.json
+/home/didowp00/projects/EightPuzzle/bin/Debug/net6.0/EightPuzzle.runtimeconfig.json
+/home/didowp00/projects/EightPuzzle/bin/Debug/net6.0/EightPuzzle.dll
+/home/didowp00/projects/EightPuzzle/bin/Debug/net6.0/EightPuzzle.pdb
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/EightPuzzle.csproj.AssemblyReference.cache
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/EightPuzzle.GeneratedMSBuildEditorConfig.editorconfig
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/EightPuzzle.AssemblyInfoInputs.cache
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/EightPuzzle.AssemblyInfo.cs
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/EightPuzzle.csproj.CoreCompileInputs.cache
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/EightPuzzle.dll
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/refint/EightPuzzle.dll
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/EightPuzzle.pdb
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/EightPuzzle.genruntimeconfig.cache
+/home/didowp00/projects/EightPuzzle/obj/Debug/net6.0/ref/EightPuzzle.dll

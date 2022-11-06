@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Problems\\FrogLeapPuzzle\\FrogLeapPuzzle.csproj": {}
+  },
+  "projects": {
+    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Problems\\FrogLeapPuzzle\\FrogLeapPuzzle.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Problems\\FrogLeapPuzzle\\FrogLeapPuzzle.csproj",
+        "projectName": "FrogLeapPuzzle",
+        "projectPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Problems\\FrogLeapPuzzle\\FrogLeapPuzzle.csproj",
+        "packagesPath": "C:\\Users\\Daniel D\\.nuget\\packages\\",
+        "outputPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Problems\\FrogLeapPuzzle\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Daniel D\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.305\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
