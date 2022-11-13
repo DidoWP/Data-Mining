@@ -10,17 +10,19 @@ namespace NQueens
         public int[] QueensPerDOne { get; set; }
         public int[] QueensPerDTwo { get; set; }
         public int[] Conflicts { get; set; }
+        public int MaxConfQueenIndex { get; set; }
 
-        public QueensBoard(int size, int[] board)
+        public QueensBoard(int size, int[] board, int[] queensPerRow, int[] queensPerDOne, int[] queensPerDTwo, int[] conflicts, int indexMaxConfQueen)
         {
             this.Size = size;
             this.Board = board;
-            this.QueensPerRow = new int[size];
-            this.QueensPerDOne = new int[size*2-1];
-            this.QueensPerDTwo = new int[size*2-1];
-            this.Conflicts = new int[size];
+            this.QueensPerRow = queensPerRow;
+            this.QueensPerDOne = queensPerDOne;
+            this.QueensPerDTwo = queensPerDTwo;
+            this.Conflicts = conflicts;
+            this.MaxConfQueenIndex = indexMaxConfQueen;
         }
-        
+
         public void PrintBoard()
         {
             for(int i=0; i<this.Size; i++)
@@ -36,4 +38,4 @@ namespace NQueens
             }
         }
     }
-} 
+}
