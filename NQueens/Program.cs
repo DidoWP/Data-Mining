@@ -6,12 +6,16 @@ class Program
 {
     public static void Main()
     {
-        var n = 10000;//Int32.Parse(Console.ReadLine());
+        var n = 6;//Int32.Parse(Console.ReadLine());
         var queensPerRow = new int[n];
         var queensPerDOne = new int[2 * n - 1];
         var queensPerDTwo = new int[2 * n - 1];
         var queensConflicts = new int[n];
         var maxConfQueens = new List<int>();
+        
+        var timer = new Stopwatch();
+        timer.Start();
+        
         var StartBoard = GenerateInitialBoard(n, queensPerRow, queensPerDOne, queensPerDTwo, queensConflicts, maxConfQueens);
 
         // Calac maxConfQueen
@@ -19,7 +23,7 @@ class Program
         if (maxConfQueens.Count > 1)
         {
             Random random = new Random();
-            var rand = random.Next(0, maxConfQueens.Count - 1);
+            var rand = random.Next(0, maxConfQueens.Count);
             indexMaxConfQueen = maxConfQueens[rand];
         }
         else
@@ -38,14 +42,13 @@ class Program
         // }
         // System.Console.WriteLine();
 
-        var timer = new Stopwatch();
-        timer.Start();
+        
 
         //find result   
         var isResult = true;
         while (isResult)
         {
-            var moves = 500;
+            var moves = 5;
 
             while (moves > 0)
             {
@@ -79,7 +82,7 @@ class Program
         {
             if (i==0)
             {
-                randNumb = random.Next(0, n - 1);
+                randNumb = random.Next(0, n);
                 board[i] = randNumb;
             }
             else
@@ -99,7 +102,7 @@ class Program
                         minQueColConfilts.Add(j);
                 }
                     
-                randNumb = random.Next(0, minQueColConfilts.Count - 1);
+                randNumb = random.Next(0, minQueColConfilts.Count);
                 board[i] = minQueColConfilts[randNumb];
             }
             queensPerRow[board[i]]++;
@@ -157,7 +160,7 @@ class Program
         if (minQueColConfilts.Count > 1)
         {
             Random random = new Random();
-            var rand = random.Next(0, minQueColConfilts.Count - 1);
+            var rand = random.Next(0, minQueColConfilts.Count);
             newQueenPosition = minQueColConfilts[rand];
         }
         else
@@ -178,9 +181,7 @@ class Program
         var max = 0;
         var maxConfQueens = new List<int>();
         for (int i = 0; i < nQueens.Size; i++)
-        {
-            //var currConf = queensPerRow[board[i]] - 1 + queensPerDOne[i - board[i] + n - 1] - 1 + queensPerDTwo[i + board[i]] - 1;
-            
+        {            
             var currConf = nQueens.QueensPerRow[nQueens.Board[i]] - 1 +
                             nQueens.QueensPerDOne[i - nQueens.Board[i] + nQueens.Size - 1] - 1 +
                             nQueens.QueensPerDTwo[i + nQueens.Board[i]] - 1;
@@ -198,14 +199,13 @@ class Program
                 maxConfQueens.Add(i);
             }
         }
-
         
-        // nQueens.PrintBoard();
-        // foreach (var conf in nQueens.Conflicts)
-        // {
-        //     System.Console.Write(conf + " ");
-        // }
-        // System.Console.WriteLine();
+        nQueens.PrintBoard();
+        foreach (var conf in nQueens.Conflicts)
+        {
+            System.Console.Write(conf + " ");
+        }
+        System.Console.WriteLine();
 
         if (max == 0)
             return false;
@@ -213,7 +213,7 @@ class Program
         if (maxConfQueens.Count > 1)
         {
             Random random = new Random();
-            var rand = random.Next(0, maxConfQueens.Count - 1);
+            var rand = random.Next(0, maxConfQueens.Count);
             nQueens.MaxConfQueenIndex = maxConfQueens[rand];
         }
         else

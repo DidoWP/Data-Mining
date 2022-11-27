@@ -1,0 +1,15 @@
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\bin\release\net6.0\NQueens.exe
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\bin\release\net6.0\NQueens.deps.json
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\bin\release\net6.0\NQueens.runtimeconfig.json
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\bin\release\net6.0\NQueens.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\bin\release\net6.0\NQueens.pdb
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\NQueens.csproj.AssemblyReference.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\NQueens.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\NQueens.AssemblyInfoInputs.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\NQueens.AssemblyInfo.cs
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\NQueens.csproj.CoreCompileInputs.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\NQueens.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\refint\NQueens.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\NQueens.pdb
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\NQueens.genruntimeconfig.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\NQueens\obj\release\net6.0\ref\NQueens.dll

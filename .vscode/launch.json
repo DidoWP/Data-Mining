@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (console)",
+            "name": "EightPuzzle",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -16,9 +16,15 @@
             "stopAtEntry": false
         },
         {
-            "name": ".NET Core Attach",
+            "name": "TSP",
             "type": "coreclr",
-            "request": "attach"
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/TSP/bin/Debug/net6.0/TSP.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/EightPuzzle",
+            "console": "internalConsole",
+            "stopAtEntry": false
         }
     ]
 }
