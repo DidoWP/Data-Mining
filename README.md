@@ -20,10 +20,17 @@ Excersices and homeworks from Data Mining course from my 4th year at university
           NxN matrix - initial board
    Output: Number of moves needed and the moves in words (left, up, right, down)
   
-  3.NQueens - local optimisations
+3. NQueens - local optimisations
     a) Realisation - min-conflict (hill-climbing)
-    b) Optimisations - initialise the initial possitions of the queens with min-conflict
+    b) Optimisations - initialise the initial positions of the queens with min-conflict
     c) Requirements - should work under 1 second for 10000 queens.
     
     Input: N - number of the queens
+    Output: 
+
+4. TSP (Traveling Salesman Problem) 
+    a) Realisation - Genetic algorithm
+    c) Requirements - 
+    
+    Input: 
     Output: 
