@@ -5,20 +5,31 @@ class Program
 {
     public static void Main()
     {
-        var n = 10;
-        var populationSize = n * 2;
-        var towns = new List<string>(){ "A", "B", "C", "D", "E", "F", "G", "H", "J", "K" };
-        var positions = new List<KeyValuePair<int, int>>();
+        var n = 12;
+        var populationSize = n * 200;
+        var towns = new List<string>(){ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L" };
+        var positions = new List<KeyValuePair<double, double>>();
         var rand = new Random();
 
         for (int i = 0; i < n; i++)
         {
-            var x = rand.Next(0, 100);
-            var y = rand.Next(0, 100);
-            positions.Add(new KeyValuePair<int, int>(x, y));
+            //var x = rand.Next(0, 100);
+            //var y = rand.Next(0, 100);
+            positions.Add(new KeyValuePair<double, double>(0.190032E-03,-0.285946E-03));
+            positions.Add(new KeyValuePair<double, double>(383.458,-0.608756E-03));
+            positions.Add(new KeyValuePair<double, double>(-27.0206,-282.758));
+            positions.Add(new KeyValuePair<double, double>(335.751,-269.577));
+            positions.Add(new KeyValuePair<double, double>(69.4331,-246.780));
+            positions.Add(new KeyValuePair<double, double>(168.521,31.4012));
+            positions.Add(new KeyValuePair<double, double>(320.350,-160.900));
+            positions.Add(new KeyValuePair<double, double>(179.933,-318.031));
+            positions.Add(new KeyValuePair<double, double>(492.671,-131.563));
+            positions.Add(new KeyValuePair<double, double>(112.198,-110.561));
+            positions.Add(new KeyValuePair<double, double>(306.320,-108.090));
+            positions.Add(new KeyValuePair<double, double>(217.343,-447.089));
         }
 
-        var distances = new double[10,10];
+        var distances = new double[12,12];
 
         for (int i = 0; i < n; i++)
         {
@@ -32,52 +43,70 @@ class Program
         System.Console.WriteLine();
 
         var population = GeneratePolulation(towns, n, populationSize, distances);
-        
-        //var generationsWithoutImprovment = 0;
-        //while(generationsWithoutImprovment < 5)
-        //{
-            population.Sort((x,y) => x.Fitness.CompareTo(y.Fitness));
+        population.Sort((x,y) => x.Fitness.CompareTo(y.Fitness));
+        System.Console.WriteLine($"Generation {0} best: {population[0].Fitness}");
 
+        var bestPath = double.MaxValue;
+        var generationCount = 0;
+        var generationsWithoutImprovment = 0;
+        while(generationsWithoutImprovment < 20)
+        {
             CalculateReproductionChance(population);
 
             var size = populationSize / 2; 
-            var stronger = population.Take(size).ToList();
-            var weaker = population.TakeLast(size).ToList();
+            //var stronger = population.Take(size).ToList();
+            //var weaker = population.TakeLast(size).ToList();
 
             var selection = SelectForReproduceing(population, size);
 
             var children = CrossingOver(selection, n, distances);
 
-        //}
+            population.AddRange(children);
+            population.Sort((x,y) => x.Fitness.CompareTo(y.Fitness));
+            population = population.Take(populationSize).ToList();
+
+            Mutate(population, n);
+            
+            if (population[0].Fitness < bestPath)
+            {
+                bestPath = population[0].Fitness;
+                generationsWithoutImprovment = 0;
+            }
+            else
+                generationsWithoutImprovment++;
+
+            generationCount++;
+            System.Console.WriteLine($"Generation {generationCount} best: {bestPath}");
+        }
 
 
         // Prints
-        System.Console.WriteLine("Stronger: ");
-        Print(stronger, populationSize / 2, n);
+        // System.Console.WriteLine("Stronger: ");
+        // Print(stronger, populationSize / 2, n);
         
-        System.Console.WriteLine("Weaker: ");
-        Print(weaker, populationSize / 2, n);
+        // System.Console.WriteLine("Weaker: ");
+        // Print(weaker, populationSize / 2, n);
     
-        System.Console.WriteLine();
-        foreach (var item in selection)
-        {
-            for (int i=0; i<n; i++)
-            {
-                System.Console.Write(item.Key.Genes[i] + " ");
-            }
-            System.Console.Write(item.Key.Fitness + " ");
-            System.Console.Write(item.Key.ReproductionChance);
-            System.Console.WriteLine();
+        // System.Console.WriteLine();
+        // foreach (var item in selection)
+        // {
+        //     for (int i=0; i<n; i++)
+        //     {
+        //         System.Console.Write(item.Key.Genes[i] + " ");
+        //     }
+        //     System.Console.Write(item.Key.Fitness + " ");
+        //     System.Console.Write(item.Key.ReproductionChance);
+        //     System.Console.WriteLine();
 
-            for (int i=0; i<n; i++)
-            {
-                System.Console.Write(item.Value.Genes[i] + " ");
-            }
-            System.Console.Write(item.Value.Fitness + " ");
-            System.Console.Write(item.Value.ReproductionChance);
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-        }
+        //     for (int i=0; i<n; i++)
+        //     {
+        //         System.Console.Write(item.Value.Genes[i] + " ");
+        //     }
+        //     System.Console.Write(item.Value.Fitness + " ");
+        //     System.Console.Write(item.Value.ReproductionChance);
+        //     System.Console.WriteLine();
+        //     System.Console.WriteLine();
+        // }
     }
 
     private static List<Individual> GeneratePolulation(List<string> towns, int townsSize, int populationSize, double[,] distances)
@@ -111,7 +140,7 @@ class Program
 
         foreach(var individual in population)
         {
-            individual.ReproductionChance = Math.Round(totalFitness / individual.Fitness / newTotalFitness * 100, 1);
+            individual.ReproductionChance = Math.Round(totalFitness / individual.Fitness / newTotalFitness * 100, 2);
         }
     }
 
@@ -123,7 +152,7 @@ class Program
 
         for (int i=0; i<population.Count(); i++)
         {
-            var count = (int)population[i].ReproductionChance * 10;
+            var count = (int)(population[i].ReproductionChance * 100);
             range += count;
             while(count > 0)
             {
@@ -134,8 +163,12 @@ class Program
 
         var countStrong = 0;
         var countWeak = 0;
-        var strongLimit = reprocuctionSize / 10 * 7;
-        var weakLimit = reprocuctionSize / 10 * 3;
+        var strongLimit = reprocuctionSize * 7 / 10;
+        var weakLimit = reprocuctionSize * 3 / 10 ;
+        
+        while (strongLimit + weakLimit < reprocuctionSize)
+            strongLimit++;
+
         while(countStrong + countWeak < reprocuctionSize)
         {
             var rand = new Random(); 
@@ -164,7 +197,9 @@ class Program
             var individualIndexSecond = pickingList[rand.Next(range)];
             while (true)
             {
-                if (individualIndexSecond < population.Count() / 2)
+                if (individualIndexFirst == individualIndexSecond) 
+                {}
+                else if (individualIndexSecond < population.Count() / 2)
                 {
                     if (countStrong < strongLimit)
                     {
@@ -214,7 +249,7 @@ class Program
 
                 if (!childOne.Contains(geneP))
                 {
-                    childOne[indexC] = geneP;
+                    childOne.Add(geneP);
                     indexC++;
                 }
                 indexP++;
@@ -228,7 +263,7 @@ class Program
 
                 if (!childTwo.Contains(geneP))
                 {
-                    childTwo[indexC] = geneP;
+                    childTwo.Add(geneP);
                     indexC++;
                 }
                 indexP++;
@@ -240,6 +275,21 @@ class Program
         return children;
     }
 
+    private static void Mutate(List<Individual> population, int n)
+    {
+        var rand = new Random();
+        for (int i=0; i<population.Count / 10; i++)
+        {
+            var toMutateIndex = rand.Next(1,population.Count());
+            var x = rand.Next(n);
+            var y = rand.Next(n);
+
+            var swp = population[toMutateIndex].Genes[x];
+            population[toMutateIndex].Genes[x] = population[toMutateIndex].Genes[y];
+            population[toMutateIndex].Genes[y] = swp;
+        }
+    }
+    
     private static void Print(List<Individual> population, int populationSize, int n)
     {
         for (int i = 0; i < populationSize; i++)
