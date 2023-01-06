@@ -25,6 +25,17 @@
             "cwd": "${workspaceFolder}/EightPuzzle",
             "console": "internalConsole",
             "stopAtEntry": false
+        },
+        {
+            "name": "NaiveBayes",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/5.NaiveBayes/bin/Debug/net6.0/NaiveBayes.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/5.NaiveBayes",
+            "console": "internalConsole",
+            "stopAtEntry": false
         }
     ]
 }

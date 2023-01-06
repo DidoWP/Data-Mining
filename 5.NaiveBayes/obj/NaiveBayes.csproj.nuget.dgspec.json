@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\TSP.csproj": {}
+    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\NaiveBayes.csproj": {}
   },
   "projects": {
-    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\TSP.csproj": {
+    "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\NaiveBayes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\TSP.csproj",
-        "projectName": "TSP",
-        "projectPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\TSP.csproj",
+        "projectUniqueName": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\NaiveBayes.csproj",
+        "projectName": "NaiveBayes",
+        "projectPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\NaiveBayes.csproj",
         "packagesPath": "C:\\Users\\Daniel D\\.nuget\\packages\\",
         "outputPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\obj\\",
         "projectStyle": "PackageReference",

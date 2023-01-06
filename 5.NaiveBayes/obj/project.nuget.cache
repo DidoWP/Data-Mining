@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6nXCjIaIB9MRgu4R4rjp5ib76k+gh5e7GGWHAzIIR+4ki8QiuJ51ZBzTHBYBzL9+iKOFVLd/gi1UB1wuDfdciw==",
+  "dgSpecHash": "mTQSJJCSMNsXiw4vdRWoSvUQWkNXIKie5k/tDy9YkWRbqIj5lSrEqbrPpE8YjZR8BmW/9A288ButkutXkCU5Tw==",
   "success": true,
-  "projectFilePath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\TSP.csproj",
+  "projectFilePath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\NaiveBayes.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

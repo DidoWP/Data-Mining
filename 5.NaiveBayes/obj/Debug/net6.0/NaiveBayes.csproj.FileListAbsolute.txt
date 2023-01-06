@@ -1,0 +1,15 @@
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\bin\Debug\net6.0\NaiveBayes.exe
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\bin\Debug\net6.0\NaiveBayes.deps.json
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\bin\Debug\net6.0\NaiveBayes.runtimeconfig.json
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\bin\Debug\net6.0\NaiveBayes.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\bin\Debug\net6.0\NaiveBayes.pdb
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\NaiveBayes.csproj.AssemblyReference.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\NaiveBayes.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\NaiveBayes.AssemblyInfoInputs.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\NaiveBayes.AssemblyInfo.cs
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\NaiveBayes.csproj.CoreCompileInputs.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\NaiveBayes.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\refint\NaiveBayes.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\NaiveBayes.pdb
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\NaiveBayes.genruntimeconfig.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\obj\Debug\net6.0\ref\NaiveBayes.dll
