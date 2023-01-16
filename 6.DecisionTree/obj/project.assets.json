@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net7.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net7.0": []
   },
   "packageFolders": {
     "C:\\Users\\Daniel D\\.nuget\\packages\\": {}
@@ -13,26 +13,26 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\NaiveBayes.csproj",
-      "projectName": "NaiveBayes",
-      "projectPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\NaiveBayes.csproj",
+      "projectUniqueName": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\6.DecisionTree\\6.DecisionTree.csproj",
+      "projectName": "6.DecisionTree",
+      "projectPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\6.DecisionTree\\6.DecisionTree.csproj",
       "packagesPath": "C:\\Users\\Daniel D\\.nuget\\packages\\",
-      "outputPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\5.NaiveBayes\\obj\\",
+      "outputPath": "G:\\My Drive\\Dido\\UNI\\Семестър_7\\Интелигентни Системи\\Data-Mining\\6.DecisionTree\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Daniel D\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {}
         }
       },
@@ -43,8 +43,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",

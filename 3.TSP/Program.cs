@@ -54,8 +54,6 @@ class Program
             CalculateReproductionChance(population);
 
             var size = populationSize / 2; 
-            //var stronger = population.Take(size).ToList();
-            //var weaker = population.TakeLast(size).ToList();
 
             var selection = SelectForReproduceing(population, size);
 

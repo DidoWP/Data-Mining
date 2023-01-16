@@ -18,7 +18,7 @@ class Program
         //     "democrat,y,y,y,n,n,n,y,y,y,n,n,n,n,n,?,?"
         // };
         
-        string data = System.IO.File.ReadAllText(@"C:\Users\Daniel D\Downloads\house-votes-84.DATA");
+        string data = System.IO.File.ReadAllText(@"G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\5.NaiveBayes\data\house-votes-84.DATA");
         System.Console.WriteLine(data);
 
         var dataArray = data.Split('\n');

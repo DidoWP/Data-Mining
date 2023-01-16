@@ -1,0 +1,15 @@
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\6.DecisionTree.csproj.AssemblyReference.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\6.DecisionTree.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\6.DecisionTree.AssemblyInfoInputs.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\6.DecisionTree.AssemblyInfo.cs
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\6.DecisionTree.csproj.CoreCompileInputs.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\bin\Debug\net7.0\6.DecisionTree.exe
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\bin\Debug\net7.0\6.DecisionTree.deps.json
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\bin\Debug\net7.0\6.DecisionTree.runtimeconfig.json
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\bin\Debug\net7.0\6.DecisionTree.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\bin\Debug\net7.0\6.DecisionTree.pdb
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\6.DecisionTree.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\refint\6.DecisionTree.dll
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\6.DecisionTree.pdb
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\6.DecisionTree.genruntimeconfig.cache
+G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\obj\Debug\net7.0\ref\6.DecisionTree.dll

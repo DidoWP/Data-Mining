@@ -36,6 +36,17 @@
             "cwd": "${workspaceFolder}/5.NaiveBayes",
             "console": "internalConsole",
             "stopAtEntry": false
+        },
+        {
+            "name": "DecisionTree",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/6.DecisionTree/bin/Debug/net7.0/6.DecisionTree.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/6.DecisionTree",
+            "console": "internalConsole",
+            "stopAtEntry": false
         }
     ]
 }
