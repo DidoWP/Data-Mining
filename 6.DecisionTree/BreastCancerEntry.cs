@@ -38,6 +38,18 @@ public class BreastCancerEntryValues
     public List<string> NodeCaps { get; set; } = new List<string>(){"yes","no"};
     public List<string> DegMalig { get; set; } = new List<string>(){"1","2","3"};
     public List<string> Breast { get; set; } = new List<string>(){"left","right"};
-    public List<string> BreastQuad { get; set; } = new List<string>(){"left-up","left-low","right-up","right-low","central"};
+    public List<string> BreastQuad { get; set; } = new List<string>(){"left_up","left_low","right_up","right_low","central"};
     public List<string> Irradiat { get; set; } = new List<string>(){"yes","no"};
+    public Dictionary<string,int> AttributeIndexes { get; set; } = new Dictionary<string, int>()
+    {
+        {"EntryClass", 0},
+        {"Age", 1},
+        {"Menopause", 2},
+        {"InvNodes", 3},
+        {"NodeCaps", 4},
+        {"DegMalig", 5},
+        {"Breast", 6},
+        {"BreastQuad", 7},
+        {"Irradiat", 8}
+    };
 }

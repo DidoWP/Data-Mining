@@ -2,26 +2,9 @@
 using System.Collections;
 
 class Program
-{
+{   
     public static void Main()
     {
-        // var dataArray = new string[]{
-        //     "no-recurrence-events,30-39,premeno,30-34,0-2,no,3,left,left_low,no",
-        //     "no-recurrence-events,40-49,premeno,20-24,0-2,no,2,right,right_up,no",
-        //     "no-recurrence-events,40-49,premeno,20-24,0-2,no,2,left,left_low,no",
-        //     "no-recurrence-events,60-69,ge40,15-19,0-2,no,2,right,left_up,no",
-        //     "no-recurrence-events,40-49,premeno,0-4,0-2,no,2,right,right_low,no",
-        //     "no-recurrence-events,60-69,ge40,15-19,0-2,no,2,left,left_low,no",
-        //     "no-recurrence-events,50-59,premeno,25-29,0-2,no,2,left,left_low,no",
-        //     "no-recurrence-events,60-69,ge40,20-24,0-2,no,1,left,left_low,no",
-        //     "no-recurrence-events,40-49,premeno,50-54,0-2,no,2,left,left_low,no",
-        //     "no-recurrence-events,40-49,premeno,20-24,0-2,no,2,right,left_up,no",
-        //     "no-recurrence-events,40-49,premeno,0-4,0-2,no,3,left,central,no",
-        //     "no-recurrence-events,50-59,ge40,25-29,0-2,no,2,left,left_low,no",
-        //     "no-recurrence-events,60-69,lt40,10-14,0-2,no,1,left,right_up,no"
-        // };
-
-    // GET DATA
         var dataArray = System.IO.File.ReadAllText(@"G:\My Drive\Dido\UNI\Семестър_7\Интелигентни Системи\Data-Mining\6.DecisionTree\data\breast-cancer.DATA").Split('\n');        
         var dataSet = new List<BreastCancerEntry>();
 
@@ -30,8 +13,126 @@ class Program
             dataSet.Add(new BreastCancerEntry(dataArray[i].Split(",")));
         }
 
-    // CALCULATE GAIN OF ALL PROPERTIES
-        var props = dataSet.First().GetType().GetProperties().Skip(1);
+        var refrectionProps = dataSet.First().GetType().GetProperties().Skip(1);
+        var props = refrectionProps.Select(x => x.Name).ToList();
+        var root = new Node(null, "root", false);
+
+        CreateTree(dataSet, props, root);
+
+        for (int i = 0; i < 10; i++)
+        {
+            var takeSize = dataSet.Count() / 10;
+            var testData = dataSet.Skip(i * takeSize).Take(takeSize);
+            var rightGuesses = 0;
+            var wrongGuesses = 0;
+
+            foreach (var test in testData)
+            {
+                var result = "";
+                Predict(test, root.Children.First(), false, result);
+
+                if (result == test.EntryClass)
+                    rightGuesses++;
+                else
+                    wrongGuesses++;
+            }
+            var accurancy = (double)rightGuesses / takeSize * 100;
+            System.Console.WriteLine($"Test {i+1}: {accurancy} %");
+        }
+
+        System.Console.WriteLine("kur");
+    }
+
+    public static void Predict(BreastCancerEntry test, Node node, bool flag, string result)
+    {
+        var breastCancerEntryValues = new BreastCancerEntryValues();
+        if (flag) return;
+
+        if (node.IsLeaf)
+        {
+            flag = true;
+            result = node.Result;
+            return;
+        }
+
+        var testValue = (string)test.GetType().GetProperty(node.AttributeName).GetValue(test, null);   
+
+        var chiled = node.Children.First(x => x.AttributeName == testValue);
+        var goToChiled = chiled.Children.First();
+        
+        Predict(test, goToChiled, flag, result);       
+    }
+
+    public static void CreateTree(List<BreastCancerEntry> dataSet, List<string> props, Node currNode)
+    {
+        var breastCancerEntryValues = new BreastCancerEntryValues();
+
+        if (props.Count() == 0)
+            return;
+
+        var propsGains = GetAttributesGain(dataSet, props);
+        var nextBranchName = propsGains.Aggregate((x,y) => x.Value > y.Value ? x : y);
+
+        var nextNode = new Node(currNode, nextBranchName.Key, true);
+        currNode.Children.Add(nextNode);
+
+        props.Remove(nextNode.AttributeName);
+
+        var values = (List<string>)breastCancerEntryValues.GetType().GetProperty(nextNode.AttributeName).GetValue(breastCancerEntryValues, null);
+        foreach(var value in values)
+        {
+            var chield = new Node(nextNode, value, false);
+            var newDataSet = new List<BreastCancerEntry>();
+            var entryClassNo = 0;
+            var entryClassYes = 0;
+
+            foreach (var item in dataSet)
+            {
+                if ((string)item.GetType().GetProperty(nextNode.AttributeName).GetValue(item, null) == value)
+                {
+                    newDataSet.Add(item);
+                    if (item.EntryClass == breastCancerEntryValues.EntryClass.First())
+                        entryClassNo++;
+                    else
+                        entryClassYes++;
+                }
+            }
+
+            if (dataSet.Count() < 10)
+            {
+                chield.IsLeaf = true;
+                if (newDataSet.Count(x => x.EntryClass == breastCancerEntryValues.EntryClass.First()) >= 5)
+                    chield.Result = breastCancerEntryValues.EntryClass.First();
+                else
+                    chield.Result = breastCancerEntryValues.EntryClass.Last();
+                
+                nextNode.Children.Add(chield);
+                return;
+            }
+            else if (entryClassNo == 0)
+            {
+                chield.IsLeaf = true;
+                chield.Result = breastCancerEntryValues.EntryClass.First();
+                nextNode.Children.Add(chield);
+                return;
+            }
+            else if (entryClassYes == 0)
+            {
+                chield.IsLeaf = true;
+                chield.Result = breastCancerEntryValues.EntryClass.Last();
+                nextNode.Children.Add(chield);
+                return;
+            }
+
+            nextNode.Children.Add(chield);
+            CreateTree(newDataSet, props, chield);
+        }
+
+        return;
+    } 
+
+    private static Dictionary<string, double> GetAttributesGain(List<BreastCancerEntry> dataSet, List<string> props)
+    {
         var propsGains = new Dictionary<string, double>();
         var breastCancerEntryValues = new BreastCancerEntryValues();
 
@@ -40,73 +141,32 @@ class Program
 
         foreach (var prop in props)
         {
-            var propValues = (List<string>)breastCancerEntryValues.GetType().GetProperty(prop.Name).GetValue(breastCancerEntryValues, null);
+            var propValues = (List<string>)breastCancerEntryValues.GetType().GetProperty(prop).GetValue(breastCancerEntryValues, null);
             var resultsWithPropValues = new Dictionary<string, KeyValuePair<int,int>>();
 
             foreach (var propValue in propValues)
             {
-                // var propValueNo = dataSet
-                //     .Count(x => x.GetType().GetProperty(prop.Name).GetValue(x, null) == propValue &&
-                //                 x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                // var propValueYes = dataSet
-                //     .Count(x => x.GetType().GetProperty(prop.Name).GetValue(x, null) == propValue &&
-                //                 x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-
                 var propValueNo = 0;
                 var propValueYes = 0;              
 
-                if (prop.Name == "Age")
+                foreach (var item in dataSet)
                 {
-                    propValueNo = dataSet.Count(x => x.Age == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.Age == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
+                    var itemValue = (string)item.GetType().GetProperty(prop).GetValue(item, null);
+                    if (itemValue == propValue && item.EntryClass == breastCancerEntryValues.EntryClass.First())
+                        propValueNo ++;
+                    
+                    else if (itemValue == propValue && item.EntryClass == breastCancerEntryValues.EntryClass.Last())
+                        propValueYes ++;
                 }
-                else if (prop.Name == "Menopause")
-                {
-                    propValueNo = dataSet.Count(x => x.Menopause == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.Menopause == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-                }
-                else if (prop.Name == "ToumorSize")
-                {
-                    propValueNo = dataSet.Count(x => x.ToumorSize == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.ToumorSize == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-                }
-                else if (prop.Name == "InvNodes")
-                {
-                    propValueNo = dataSet.Count(x => x.InvNodes == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.InvNodes == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-                }
-                else if (prop.Name == "NodeCaps")
-                {
-                    propValueNo = dataSet.Count(x => x.NodeCaps == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.NodeCaps == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-                }
-                else if (prop.Name == "DegMalig")
-                {
-                    propValueNo = dataSet.Count(x => x.DegMalig == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.DegMalig == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-                }
-                else if (prop.Name == "Breast")
-                {
-                    propValueNo = dataSet.Count(x => x.Breast == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.Breast == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-                }
-                else if (prop.Name == "BreastQuad")
-                {
-                    propValueNo = dataSet.Count(x => x.BreastQuad == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.BreastQuad == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-                }
-                else if (prop.Name == "Irradiat")
-                {
-                    propValueNo = dataSet.Count(x => x.Irradiat == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.First());
-                    propValueYes = dataSet.Count(x => x.Irradiat == propValue && x.EntryClass == breastCancerEntryValues.EntryClass.Last());
-                }
-
+               
                 resultsWithPropValues.Add(propValue, new KeyValuePair<int, int>(propValueNo, propValueYes));
             }
             
             var propGain = CalculateGainTX(resultsWithPropValues, entryClassNo, entryClassYes);
-            propsGains.Add(prop.Name, propGain);
+            propsGains.Add(prop, propGain);
         }
+
+        return propsGains;
     }
 
     private static double EntropyT(int no, int yes)
